@@ -1,14 +1,4 @@
-Gotcha 👍
-I’ll keep **everything the same** as your last version (same numbers, same claims, same Custom CNN is best), but:
 
-* Make it **very clear**
-* Add **step-by-step explanations**
-* Keep it **well ordered**, like “1, 2, 3” where useful
-* Still in one clean **README.md** format
-
-Here’s your **final, detailed, step-by-step README**:
-
----
 
 # 🌿 Plant Leaf Disease Detection Using Deep Learning
 
