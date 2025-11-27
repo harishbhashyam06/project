@@ -1,45 +1,45 @@
 
-
 # 🌿 Plant Leaf Disease Detection Using Deep Learning
 
 This is a **complete, detailed, and step-by-step README** for your Plant Leaf Disease Detection project using Deep Learning and Streamlit.
 
 It explains:
 
-* What the project does
-* Which models you used
-* How you trained and evaluated them
-* How you checked trustworthiness (robustness + explainability)
-* Why **Custom CNN is the best model**
-* How to **run the app**, **use Docker**, and **troubleshoot issues**
+- What the project does  
+- Which models you used  
+- How you trained and evaluated them  
+- How you checked trustworthiness (robustness + explainability)  
+- Why **Custom CNN is the best model**  
+- How to **run the app**, **use Docker**, and **troubleshoot issues**  
 
 ---
 
 ## 📑 Table of Contents
 
-1. [Project Overview](#overview)
-2. [Project Goals](#project-goals)
-3. [Dataset Details](#dataset-details)
-4. [Models Trained](#models-trained)
-5. [Why Custom CNN is the Best Model](#why-custom-cnn-is-the-best-model)
-6. [Performance Metrics (Accuracy & Validation)](#performance-metrics-accuracy--validation)
-7. [Confusion Matrix & Classification Metrics](#confusion-matrix--classification-metrics-custom-cnn)
-8. [Robustness Evaluation (Trustworthiness)](#robustness-evaluation-trustworthiness)
-9. [Explainability Evaluation (Grad-CAM)](#explainability-evaluation-grad-cam)
-10. [Cross-Dataset (PlantDoc) Generalization](#cross-dataset-plantdoc-generalization)
-11. [Streamlit Deployment](#streamlit-deployment)
-12. [Workflow Summary (Step-by-Step)](#workflow-summary)
-13. [Troubleshooting](#troubleshooting)
-14. [Quick Commands Summary](#quick-commands-summary)
-15. [Folder Structure](#folder-structure)
-16. [Download Final Model](#download-final-model)
-17. [Environment Setup](#environment-setup)
-18. [Run the Application](#run-the-application)
-19. [Docker Deployment](#docker-deployment)
-20. [References](#references)
-21. [Reliability & Limitations](#reliability--limitations)
-22. [Future Enhancements](#future-enhancements)
-23. [Final Summary](#final-summary)
+1. [Project Overview](#overview)  
+2. [Project Goals](#project-goals)  
+3. [Dataset Details](#dataset-details)  
+4. [Models Trained](#models-trained)  
+5. [Why Custom CNN is the Best Model](#why-custom-cnn-is-the-best-model)  
+6. [Performance Metrics (Accuracy & Validation)](#performance-metrics-accuracy--validation)  
+7. [Confusion Matrix & Classification Metrics](#confusion-matrix--classification-metrics-custom-cnn)  
+8. [Robustness Evaluation (Trustworthiness)](#robustness-evaluation-trustworthiness)  
+9. [Explainability Evaluation (Grad-CAM)](#explainability-evaluation-grad-cam)  
+10. [Cross-Dataset (PlantDoc) Generalization](#cross-dataset-plantdoc-generalization)  
+11. [Streamlit Deployment](#streamlit-deployment)  
+12. [Test the Model](#test-the-model)  
+13. [Workflow Summary (Step-by-Step)](#workflow-summary)  
+14. [Troubleshooting](#troubleshooting)  
+15. [Quick Commands Summary](#quick-commands-summary)  
+16. [Folder Structure](#folder-structure)  
+17. [Download Final Model](#download-final-model)  
+18. [Environment Setup](#environment-setup)  
+19. [Run the Application](#run-the-application)  
+20. [Docker Deployment](#docker-deployment)  
+21. [References](#references)  
+22. [Reliability & Limitations](#reliability--limitations)  
+23. [Future Enhancements](#future-enhancements)  
+24. [Final Summary](#final-summary)  
 
 ---
 
@@ -51,41 +51,40 @@ It explains:
 
 This project:
 
-1. Takes an image of a **plant leaf** as input.
-2. Uses a **deep learning model** to analyze the leaf.
-3. Predicts **which disease** (if any) is present.
+1. Takes an image of a **plant leaf** as input.  
+2. Uses a **deep learning model** to analyze the leaf.  
+3. Predicts **which disease** (if any) is present.  
 4. Shows the result in a simple **Streamlit web app**.
 
 ### 1.2 Technologies used
 
-* **TensorFlow + Keras** → to build and train deep learning models.
-* **Python** → for all backend scripting.
-* **Streamlit** → to create a web interface.
+- **TensorFlow + Keras** → to build and train deep learning models.  
+- **Python** → for all backend scripting.  
+- **Streamlit** → to create a web interface.  
 
 ### 1.3 What is included in this project
 
 This project includes:
 
-1. **Dataset processing** – preparing images for training.
-2. **Training four CNN models** – Custom CNN, VGG16, MobileNetV2, DenseNet121.
-3. **Accuracy and metric evaluation** – which model performs best.
+1. **Dataset processing** – preparing images for training.  
+2. **Training four CNN models** – Custom CNN, VGG16, MobileNetV2, DenseNet121.  
+3. **Accuracy and metric evaluation** – which model performs best.  
 4. **Trustworthiness evaluation**:
-
-   * Robustness (noisy / blurred images, etc.)
-   * Explainability (Grad-CAM)
-5. **Cross-dataset testing** using **PlantDoc** (real-world images).
-6. **Deployment** of the best model via a Streamlit app.
+   - Robustness (noisy / blurred images, etc.)
+   - Explainability (Grad-CAM)
+5. **Cross-dataset testing** using **PlantDoc** (real-world images).  
+6. **Deployment** of the best model via a Streamlit app.  
 7. A **final recommendation** for real-world farm usage.
 
 ### 1.4 Final key point
 
 After all experiments, **Custom CNN** is chosen as the **best, most trustworthy model**:
 
-* Most robust
-* Most interpretable
-* High accuracy
-* Stable under distortions
-* Best generalization
+- Most robust  
+- Most interpretable  
+- High accuracy  
+- Stable under distortions  
+- Best generalization  
 
 ---
 
@@ -95,40 +94,35 @@ After all experiments, **Custom CNN** is chosen as the **best, most trustworthy 
 
 ### 2.1 Midterm Goals (Model Building & App)
 
-1. Train several deep learning models on the **PlantVillage dataset**.
-2. Build a **multi-class plant disease classifier**.
-3. Create a **Streamlit app** to demonstrate predictions.
-4. Choose the **best model** based on accuracy.
+1. Train several deep learning models on the **PlantVillage dataset**.  
+2. Build a **multi-class plant disease classifier**.  
+3. Create a **Streamlit app** to demonstrate predictions.  
+4. Choose the **best model** based on accuracy.  
 
 ### 2.2 Final Project Goals (Trustworthiness)
 
-1. Go beyond accuracy and check if models are **trustworthy**.
+1. Go beyond accuracy and check if models are **trustworthy**.  
 2. Evaluate:
-
-   * **Robustness** → how stable is the model under:
-
-     * noise, blur, lighting changes, occlusions, adversarial attacks
-   * **Explainability** → using Grad-CAM to see where the model is “looking”.
-   * **Generalization** → test on **PlantDoc**, a real-world dataset.
+   - **Robustness** → how stable is the model under:
+     - noise, blur, lighting changes, occlusions, adversarial attacks
+   - **Explainability** → using Grad-CAM to see where the model is “looking”.  
+   - **Generalization** → test on **PlantDoc**, a real-world dataset.  
 3. Decide:
-
-   * Which model is **safe** for real-world use.
-   * Which model is **recommended for deployment**.
+   - Which model is **safe** for real-world use.  
+   - Which model is **recommended for deployment**.  
 
 ### 2.3 Final Conclusion
 
 > ⭐ **Custom CNN is the BEST and MOST TRUSTWORTHY MODEL**
 
-It outperforms:
+It outperforms **VGG16**, **MobileNetV2**, and **DenseNet121** in:
 
-* **VGG16**, **MobileNetV2**, and **DenseNet121** in:
-
-  * Accuracy
-  * Robustness
-  * Explainability
-  * Consistency
-  * Deployment speed
-  * Real-world generalization
+- Accuracy  
+- Robustness  
+- Explainability  
+- Consistency  
+- Deployment speed  
+- Real-world generalization  
 
 ---
 
@@ -140,7 +134,7 @@ It outperforms:
 
 We use the **PlantVillage dataset** from Kaggle:
 
-🔗 [https://www.kaggle.com/datasets/naimur006/plant-leaves-disease-detection/data](https://www.kaggle.com/datasets/naimur006/plant-leaves-disease-detection/data)
+🔗 https://www.kaggle.com/datasets/naimur006/plant-leaves-disease-detection/data
 
 ### 3.2 Folder Structure (Example)
 
@@ -154,7 +148,7 @@ Multi_Crop_Dataset/
     ├── apple/
     ├── corn/
     └── ...
-```
+````
 
 Each subfolder represents **one class** (one disease or healthy).
 
@@ -207,7 +201,7 @@ We trained **four** CNN-based models:
 
 ### 4.1 Custom CNN
 
-* Designed by you, from scratch.
+* Designed from scratch.
 * Fewer parameters than big pretrained models.
 * Trained carefully for **good generalization**.
 * Turned out to be:
@@ -330,7 +324,7 @@ You tested each model under:
 1. **Gaussian Noise**
 2. **Blur**
 3. **Brightness Change**
-4. **Occlusions (part of the leaf covered)**
+4. **Occlusions** (part of the leaf covered)
 5. **FGSM Attack** (Fast Gradient Sign Method)
 6. **PGD Attack** (Projected Gradient Descent)
 
@@ -435,9 +429,49 @@ The **Streamlit app**:
 
 ---
 
+<a name="test-the-model"></a>
+
+# 🧪 12. Test the Model
+
+You can verify the model’s predictions using sample test images.
+
+### 12.1 Test Images Folder
+
+```bash
+test_images/
+├── test_apple_black_rot.JPG
+├── test_blueberry_healthy.jpg
+└── test_potato_early_blight.jpg
+```
+
+### 12.2 Steps to Test
+
+1. Run the Streamlit app.
+2. In the browser, click **Browse files** / **Upload an Image**.
+3. Choose any image from the `test_images/` folder.
+4. Click the **Classify** button.
+5. The app will show the predicted disease.
+
+### 12.3 Example Output
+
+**Example prediction:**
+
+```text
+Prediction: Tomato__Tomato_Yellow_Leaf_Curl_Virus
+Confidence: 0.9873
+```
+
+**Example UI Screenshot (replace with your actual GitHub image path):**
+
+```markdown
+![App Output](https://github.com/harishbhashyam06/AI-Plant-Leaf-Disease-Detection-Using-Deep-Learning/blob/main/test_images/output.png)
+```
+
+---
+
 <a name="workflow-summary"></a>
 
-# 🧩 12. Workflow Summary (Step-by-Step)
+# 🧩 13. Workflow Summary (Step-by-Step)
 
 Here is the **entire pipeline**, one step at a time:
 
@@ -448,20 +482,20 @@ Here is the **entire pipeline**, one step at a time:
 
 2. **Preprocess Images**
 
-   * Resize to `224x224`.
-   * Normalize to `[0, 1]`.
+   * Resize images to `224x224`.
+   * Normalize pixel values to `[0, 1]`.
 
 3. **Train Models**
 
    * Train **Custom CNN, VGG16, MobileNetV2, DenseNet121**.
-   * Use training and validation data.
+   * Use training and validation datasets.
    * Monitor accuracy/loss to avoid overfitting.
 
 4. **Evaluate Performance**
 
    * Compute test accuracy.
    * Generate confusion matrix.
-   * Calculate precision, recall, F1-score.
+   * Calculate precision, recall, and F1-score.
 
 5. **Trustworthiness Evaluation**
 
@@ -472,8 +506,8 @@ Here is the **entire pipeline**, one step at a time:
 
 6. **Select Best Model**
 
-   * Based on accuracy + robustness + explainability + generalization.
-   * **Custom CNN is selected.**
+   * Consider accuracy + robustness + explainability + generalization.
+   * **Custom CNN is selected as the final model.**
 
 7. **Save Best Model**
 
@@ -482,34 +516,34 @@ Here is the **entire pipeline**, one step at a time:
 
 8. **Deploy via Streamlit**
 
-   * App loads `.h5` model.
+   * The app loads the `.h5` model.
    * User uploads image.
-   * App shows prediction.
+   * App shows prediction and can be extended to show Grad-CAM.
 
 ---
 
 <a name="troubleshooting"></a>
 
-# 🛠️ 13. Troubleshooting
+# 🛠️ 14. Troubleshooting
 
-### 13.1 Common Issues and Fixes
+### 14.1 Common Issues and Fixes
 
-| Issue                          | Cause                                     | Fix                                                 |
-| ------------------------------ | ----------------------------------------- | --------------------------------------------------- |
-| `No module named 'tensorflow'` | TensorFlow not installed                  | `pip install tensorflow==2.15.0.post1`              |
-| `streamlit not recognized`     | Streamlit missing                         | `pip install streamlit`                             |
-| `ValueError: numpy > 2.0`      | Version mismatch                          | `pip install numpy==1.26.4`                         |
-| `OSError: Cannot load model`   | Wrong .h5 file path                       | Place `.h5` in `app/trained_model/`                 |
-| App reloads slowly             | Model loading every run                   | Use `@st.cache_resource` on model loading function  |
-| Wrong labels                   | Order in `class_indices.json` not correct | Regenerate `class_indices.json` using training code |
+| Issue                          | Cause                                   | Fix                                                   |
+| ------------------------------ | --------------------------------------- | ----------------------------------------------------- |
+| `No module named 'tensorflow'` | TensorFlow not installed                | `pip install tensorflow==2.15.0.post1`                |
+| `streamlit not recognized`     | Streamlit missing                       | `pip install streamlit`                               |
+| `ValueError: numpy > 2.0`      | Version mismatch                        | `pip install numpy==1.26.4`                           |
+| `OSError: Cannot load model`   | Wrong `.h5` file path                   | Place `.h5` in `app/trained_model/`                   |
+| App reloads slowly             | Model loading on every run              | Use `@st.cache_resource` for model loading function   |
+| Wrong labels                   | `class_indices.json` not matching model | Regenerate `class_indices.json` using training script |
 
 ---
 
 <a name="quick-commands-summary"></a>
 
-# 🧾 14. Quick Commands Summary
+# 🧾 15. Quick Commands Summary
 
-### 14.1 Most used commands (Windows)
+### 15.1 Most used commands (Windows)
 
 | Action               | Command                               |
 | -------------------- | ------------------------------------- |
@@ -521,7 +555,7 @@ Here is the **entire pipeline**, one step at a time:
 
 <a name="folder-structure"></a>
 
-# 🗂️ 15. Folder Structure
+# 🗂️ 16. Folder Structure
 
 ```bash
 plant-leaf-disease-dl/
@@ -547,9 +581,9 @@ plant-leaf-disease-dl/
 
 <a name="download-final-model"></a>
 
-# 📥 16. Download Final Model
+# 📥 17. Download Final Model
 
-### 16.1 Model File
+### 17.1 Model File
 
 * **Custom CNN final model** (saved as `.h5`).
 * Place it in:
@@ -562,9 +596,9 @@ app/trained_model/plant_disease_prediction_model.h5
 
 <a name="environment-setup"></a>
 
-# ⚙️ 17. Environment Setup
+# ⚙️ 18. Environment Setup
 
-### 17.1 Step 1 — Create Virtual Environment
+### 18.1 Step 1 — Create Virtual Environment
 
 **Windows (PowerShell):**
 
@@ -583,7 +617,7 @@ source venv/bin/activate
 
 Make sure you see `(venv)` at the start of your terminal line.
 
-### 17.2 Step 2 — Install Dependencies
+### 18.2 Step 2 — Install Dependencies
 
 ```bash
 pip install -r app/requirements.txt
@@ -602,7 +636,7 @@ protobuf<5
 h5py>=3.10
 ```
 
-### 17.3 Step 3 — Verify Installation
+### 18.3 Step 3 — Verify Installation
 
 ```bash
 python -m pip show tensorflow
@@ -620,9 +654,9 @@ pip install streamlit
 
 <a name="run-the-application"></a>
 
-# 🚀 18. Run the Application
+# 🚀 19. Run the Application
 
-### 18.1 Run locally
+### 19.1 Run locally
 
 ```bash
 python -m streamlit run app/main.py
@@ -635,9 +669,9 @@ Then open browser at:
 
 <a name="docker-deployment"></a>
 
-# 🛳️ 19. Docker Deployment
+# 🛳️ 20. Docker Deployment
 
-### 19.1 Dockerfile
+### 20.1 Dockerfile
 
 ```dockerfile
 FROM python:3.10-slim
@@ -663,7 +697,7 @@ COPY app/credentials.toml ~/.streamlit/credentials.toml
 ENTRYPOINT ["streamlit", "run", "main.py", "--server.port=8501", "--server.address=0.0.0.0"]
 ```
 
-### 19.2 Build & Run Container
+### 20.2 Build & Run Container
 
 ```bash
 docker build -t plant-disease-app .
@@ -677,40 +711,45 @@ App will be available at:
 
 <a name="references"></a>
 
-# 📚 20. References
+# 📚 21. References
 
-### 20.1 Research Papers
-
+### 21.1 Research Papers (Midterm + Final)
 
 **Plant Disease Detection & Datasets**
-- Mohanty et al., 2016 – Deep CNNs (AlexNet, GoogLeNet) on PlantVillage, ~99% accuracy.
-- Singh et al., 2019 – PlantDoc: real-field plant disease dataset (domain shift from lab to field).
+
+* Mohanty et al., 2016 – Deep CNNs (AlexNet, GoogLeNet) on PlantVillage, ~99% accuracy.
+* Singh et al., 2019 – PlantDoc: real-field plant disease dataset (domain shift from lab to field).
 
 **Robustness & Distribution Shift**
-- Hendrycks & Dietterich, 2019 – ImageNet-C: common corruptions (noise, blur, brightness) for robustness testing.
-- Taori et al., 2020 – Measuring robustness to natural distribution shifts (supports cross-dataset testing like PlantVillage → PlantDoc).
+
+* Hendrycks & Dietterich, 2019 – ImageNet-C: common corruptions (noise, blur, brightness) for robustness testing.
+* Taori et al., 2020 – Measuring robustness to natural distribution shifts (supports cross-dataset testing like PlantVillage → PlantDoc).
 
 **Adversarial Attacks**
-- Goodfellow et al., 2015 – FGSM: Fast Gradient Sign Method adversarial attack.
-- Madry et al., 2018 – PGD: strong iterative adversarial attack and robust training.
+
+* Goodfellow et al., 2015 – FGSM: Fast Gradient Sign Method adversarial attack.
+* Madry et al., 2018 – PGD: strong iterative adversarial attack and robust training.
 
 **Explainability**
-- Selvaraju et al., 2017 – Grad-CAM: visual explanations for CNNs (used for your heatmaps).
-- Ribeiro et al., 2016 – LIME: “Why Should I Trust You?” (general XAI motivation).
 
-**Frameworks Docs**
-- TensorFlow, Keras, Streamlit – official documentation for training and web deployment.
+* Selvaraju et al., 2017 – Grad-CAM: visual explanations for CNNs (used for your heatmaps).
+* Ribeiro et al., 2016 – LIME: “Why Should I Trust You?” (general XAI motivation).
+
+### 21.2 Framework Documentation
+
 * **TensorFlow** – main ML framework for training + inference
 * **Keras** – high-level API over TensorFlow
 * **Streamlit** – turns Python scripts into web apps quickly
+
+(Official docs: tensorflow.org, keras.io, docs.streamlit.io)
 
 ---
 
 <a name="reliability--limitations"></a>
 
-# 🔒 21. Reliability & Limitations
+# 🔒 22. Reliability & Limitations
 
-### 21.1 Reliability Strengths
+### 22.1 Reliability Strengths
 
 Custom CNN is:
 
@@ -720,7 +759,7 @@ Custom CNN is:
 * Fast and efficient for real-time usage.
 * Stable – small input changes do not drastically change predictions.
 
-### 21.2 Known Limitations
+### 22.2 Known Limitations
 
 1. Works best with **single-leaf** images.
 2. Does **not** estimate severity (e.g., mild vs severe).
@@ -731,7 +770,7 @@ Custom CNN is:
 
 <a name="future-enhancements"></a>
 
-# 🛠️ 22. Future Enhancements
+# 🛠️ 23. Future Enhancements
 
 Possible improvements:
 
@@ -759,7 +798,7 @@ Possible improvements:
 
 <a name="final-summary"></a>
 
-# 🏁 23. Final Summary
+# 🏁 24. Final Summary
 
 * You trained **four models**: Custom CNN, VGG16, MobileNetV2, DenseNet121.
 * You evaluated them in terms of:
@@ -776,7 +815,5 @@ Possible improvements:
 * Best Grad-CAM interpretability
 * Best cross-dataset performance
 * Fastest and most suitable for real deployment
-
-
 
 
