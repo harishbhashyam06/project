@@ -98,6 +98,7 @@ This project was completed by a team of **three members**:
   - Implemented **data preprocessing** (resizing, normalization, train/val/test splits).  
   - Designed and trained the **Custom CNN** model.  
   - Helped prepare the **classification metrics** (precision, recall, F1-score).
+  - Built the **Streamlit app**, Dockerfile, and wrote the **README documentation**.
 
 - **Member 2 – \<Vineeth  Godishala\>**  
   - Implemented and fine-tuned **transfer learning models**: VGG16, MobileNetV2, DenseNet121.  
@@ -109,7 +110,7 @@ This project was completed by a team of **three members**:
   - Implemented **robustness evaluations**: noise, blur, brightness, occlusions.  
   - Implemented **FGSM and PGD adversarial attacks** and summarized robustness tables.  
   - Implemented **Grad-CAM explainability** for all four models.  
-  - Built the **Streamlit app**, Dockerfile, and wrote the **README documentation**.
+
 
 All three members jointly discussed design choices, analyzed results, and finalized the conclusion that **Custom CNN** is the most reliable and robust model for deployment.
 
