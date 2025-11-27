@@ -702,6 +702,28 @@ These references support:
 * Your **deployment choice**
 
 ---
+## 📚 References (Short)
+
+**Plant Disease Detection & Datasets**
+- Mohanty et al., 2016 – Deep CNNs (AlexNet, GoogLeNet) on PlantVillage, ~99% accuracy.
+- Singh et al., 2019 – PlantDoc: real-field plant disease dataset (domain shift from lab to field).
+
+**Robustness & Distribution Shift**
+- Hendrycks & Dietterich, 2019 – ImageNet-C: common corruptions (noise, blur, brightness) for robustness testing.
+- Taori et al., 2020 – Measuring robustness to natural distribution shifts (supports cross-dataset testing like PlantVillage → PlantDoc).
+
+**Adversarial Attacks**
+- Goodfellow et al., 2015 – FGSM: Fast Gradient Sign Method adversarial attack.
+- Madry et al., 2018 – PGD: strong iterative adversarial attack and robust training.
+
+**Explainability**
+- Selvaraju et al., 2017 – Grad-CAM: visual explanations for CNNs (used for your heatmaps).
+- Ribeiro et al., 2016 – LIME: “Why Should I Trust You?” (general XAI motivation).
+
+**Frameworks**
+- TensorFlow, Keras, Streamlit – official documentation for training and web deployment.
+
+---
 
 <a name="reliability--limitations"></a>
 
