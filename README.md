@@ -1,45 +1,45 @@
 
-
 # 🌿 Plant Leaf Disease Detection Using Deep Learning
 
-This is a **complete, detailed, and step-by-step README** for your Plant Leaf Disease Detection project using Deep Learning and Streamlit.
+This is a **complete, detailed, and step-by-step README** for our Plant Leaf Disease Detection project using Deep Learning and Streamlit.
 
 It explains:
 
-* What the project does
-* Which models you used
-* How you trained and evaluated them
-* How you checked trustworthiness (robustness + explainability)
-* Why **Custom CNN is the best model**
-* How to **run the app**, **use Docker**, and **troubleshoot issues**
+- What the project does  
+- Which models we used  
+- How we trained and evaluated them  
+- How we checked **trustworthiness**, with a primary focus on **Reliability and Robustness** (course requirement)  
+- How we used **Grad-CAM** as a supporting explainability tool  
+- Why **Custom CNN is the best model**  
+- How to **run the app**, **run robustness & attack evaluations**, **use Docker**, and **troubleshoot issues**
 
 ---
 
 ## 📑 Table of Contents
 
-1. [Project Overview](#overview)
-2. [Project Goals](#project-goals)
-3. [Dataset Details](#dataset-details)
-4. [Environment Setup](#environment-setup)
-5. [Folder Structure](#folder-structure)
-6. [Models Trained](#models-trained)
-7. [Performance Metrics (Accuracy & Validation)](#performance-metrics-accuracy--validation)
-8. [Confusion Matrix & Classification Metrics](#confusion-matrix--classification-metrics-custom-cnn)
-9. [Robustness Evaluation (Trustworthiness)](#robustness-evaluation-trustworthiness)
-10. [Explainability Evaluation (Grad-CAM)](#explainability-evaluation-grad-cam)
-11. [Cross-Dataset (PlantDoc) Generalization](#cross-dataset-plantdoc-generalization)
-12. [Why Custom CNN is the Best Model](#why-custom-cnn-is-the-best-model)
-13. [Reliability & Limitations](#reliability--limitations)
-14. [Download Final Model](#download-final-model)
-15. [Streamlit Deployment](#streamlit-deployment)
-16. [Run the Application](#run-the-application)
-17. [Docker Deployment](#docker-deployment)
-18. [Test the Model](#test-the-model)
-19. [Workflow Summary (Step-by-Step)](#workflow-summary)
-20. [Quick Commands Summary](#quick-commands-summary)
-21. [Troubleshooting](#troubleshooting)
-22. [Future Enhancements](#future-enhancements)
-23. [References](#references)
+1. [Project Overview](#overview)  
+2. [Project Goals](#project-goals)  
+3. [Dataset Details](#dataset-details)  
+4. [Environment Setup](#environment-setup)  
+5. [Folder Structure](#folder-structure)  
+6. [Models Trained](#models-trained)  
+7. [Performance Metrics (Accuracy & Validation)](#performance-metrics-accuracy--validation)  
+8. [Confusion Matrix & Classification Metrics](#confusion-matrix--classification-metrics-custom-cnn)  
+9. [Robustness Evaluation (Trustworthiness)](#robustness-evaluation-trustworthiness)  
+10. [Explainability Evaluation (Grad-CAM)](#explainability-evaluation-grad-cam)  
+11. [Cross-Dataset (PlantDoc) Generalization](#cross-dataset-plantdoc-generalization)  
+12. [Why Custom CNN is the Best Model](#why-custom-cnn-is-the-best-model)  
+13. [Reliability & Limitations](#reliability--limitations)  
+14. [Download Final Model](#download-final-model)  
+15. [Streamlit Deployment](#streamlit-deployment)  
+16. [Run the Application](#run-the-application)  
+17. [Docker Deployment](#docker-deployment)  
+18. [Test the Model](#test-the-model)  
+19. [Workflow Summary (Step-by-Step)](#workflow-summary)  
+20. [Quick Commands Summary](#quick-commands-summary)  
+21. [Troubleshooting](#troubleshooting)  
+22. [Future Enhancements](#future-enhancements)  
+23. [References](#references)  
 24. [Final Summary](#final-summary)
 
 ---
@@ -52,41 +52,67 @@ It explains:
 
 This project:
 
-1. Takes an image of a **plant leaf** as input.
-2. Uses a **deep learning model** to analyze the leaf.
-3. Predicts **which disease** (if any) is present.
+1. Takes an image of a **plant leaf** as input.  
+2. Uses a **deep learning model** to analyze the leaf.  
+3. Predicts **which disease** (if any) is present.  
 4. Shows the result in a simple **Streamlit web app**.
 
 ### 1.2 Technologies used
 
-* **TensorFlow + Keras** → to build and train deep learning models.
-* **Python** → for all backend scripting.
-* **Streamlit** → to create a web interface.
+- **TensorFlow + Keras** → to build and train deep learning models.  
+- **Python** → for all backend scripting.  
+- **Streamlit** → to create a web interface.  
 
 ### 1.3 What is included in this project
 
 This project includes:
 
-1. **Dataset processing** – preparing images for training.
-2. **Training four CNN models** – Custom CNN, VGG16, MobileNetV2, DenseNet121.
-3. **Accuracy and metric evaluation** – which model performs best.
-4. **Trustworthiness evaluation**:
-
-   * Robustness (noisy / blurred images, etc.)
-   * Explainability (Grad-CAM)
-5. **Cross-dataset testing** using **PlantDoc** (real-world images).
-6. **Deployment** of the best model via a Streamlit app.
-7. A **final recommendation** for real-world farm usage.
+1. **Dataset processing** – preparing images for training.  
+2. **Training four CNN models** – Custom CNN, VGG16, MobileNetV2, DenseNet121.  
+3. **Accuracy and metric evaluation** – which model performs best.  
+4. **Trustworthiness evaluation** with a focus on **Reliability and Robustness**:
+   - Common distortions (noise, blur, brightness changes, occlusions)  
+   - Adversarial attacks (FGSM, PGD)  
+   - Cross-dataset testing using **PlantDoc** (real-world images)  
+   - **Grad-CAM** as a supporting tool to check if the model looks at the right leaf regions  
+5. **Deployment** of the best model via a Streamlit app.  
+6. A **final recommendation** for real-world farm usage.
 
 ### 1.4 Final key point
 
 After all experiments, **Custom CNN** is chosen as the **best, most trustworthy model**:
 
-* Most robust
-* Most interpretable
-* High accuracy
-* Stable under distortions
-* Best generalization
+- Most robust  
+- Most interpretable (via Grad-CAM)  
+- High accuracy  
+- Stable under distortions and attacks  
+- Best generalization to real-world data  
+
+### 1.5 Team Members & Contributions
+
+This project was completed by a team of **three members**:
+
+> ⚠️ _Replace the placeholder names below with your actual names before submission._
+
+- **Member 1 – \<Harish Bhashyam\>**  
+  - Collected and organized the **PlantVillage** dataset.  
+  - Implemented **data preprocessing** (resizing, normalization, train/val/test splits).  
+  - Designed and trained the **Custom CNN** model.  
+  - Helped prepare the **classification metrics** (precision, recall, F1-score).
+
+- **Member 2 – \<Vineeth  Godishala\>**  
+  - Implemented and fine-tuned **transfer learning models**: VGG16, MobileNetV2, DenseNet121.  
+  - Ran **baseline accuracy evaluations** and created the **performance comparison tables**.  
+  - Performed **cross-dataset experiments** on **PlantDoc** and analyzed generalization.  
+  - Contributed to writing the **model comparison and final decision** sections.
+
+- **Member 3 – \<Sachith Reddy Mekala\>**  
+  - Implemented **robustness evaluations**: noise, blur, brightness, occlusions.  
+  - Implemented **FGSM and PGD adversarial attacks** and summarized robustness tables.  
+  - Implemented **Grad-CAM explainability** for all four models.  
+  - Built the **Streamlit app**, Dockerfile, and wrote the **README documentation**.
+
+All three members jointly discussed design choices, analyzed results, and finalized the conclusion that **Custom CNN** is the most reliable and robust model for deployment.
 
 ---
 
@@ -96,25 +122,30 @@ After all experiments, **Custom CNN** is chosen as the **best, most trustworthy 
 
 ### 2.1 Midterm Goals (Model Building & App)
 
-1. Train several deep learning models on the **PlantVillage dataset**.
-2. Build a **multi-class plant disease classifier**.
-3. Create a **Streamlit app** to demonstrate predictions.
+1. Train several deep learning models on the **PlantVillage dataset**.  
+2. Build a **multi-class plant disease classifier**.  
+3. Create a **Streamlit app** to demonstrate predictions.  
 4. Choose the **best model** based on accuracy.
 
 ### 2.2 Final Project Goals (Trustworthiness)
 
-1. Go beyond accuracy and check if models are **trustworthy**.
-2. Evaluate:
+For the final project, we **go beyond accuracy** and check if the models are **trustworthy**.
 
-   * **Robustness** → how stable is the model under:
+We evaluate:
 
-     * noise, blur, lighting changes, occlusions, adversarial attacks
-   * **Explainability** → using Grad-CAM to see where the model is “looking”.
-   * **Generalization** → test on **PlantDoc**, a real-world dataset.
-3. Decide:
+- **Robustness / Reliability** → how stable is the model under:
+  - Noise  
+  - Blur  
+  - Lighting changes  
+  - Occlusions  
+  - Adversarial attacks (FGSM, PGD)  
+- **Generalization** → test on **PlantDoc**, a real-world dataset with natural farm images.  
+- **Explainability (supporting)** → use Grad-CAM to see where the model is “looking” and verify that it focuses on disease regions.
 
-   * Which model is **safe** for real-world use.
-   * Which model is **recommended for deployment**.
+We then decide:
+
+- Which model is **safe** for real-world use.  
+- Which model is **recommended for deployment** in the Streamlit app.
 
 ### 2.3 Final Conclusion
 
@@ -122,12 +153,25 @@ After all experiments, **Custom CNN** is chosen as the **best, most trustworthy 
 
 It outperforms **VGG16**, **MobileNetV2**, and **DenseNet121** in:
 
-* Accuracy
-* Robustness
-* Explainability
-* Consistency
-* Deployment speed
-* Real-world generalization
+- Accuracy  
+- Robustness (distortions + attacks)  
+- Consistency  
+- Real-world generalization (PlantDoc)  
+- Inference speed and deployment readiness  
+
+### 2.4 Trustworthiness Focus (Final Project Requirement)
+
+According to the course requirement, this final project evaluates the AI application based on **one specific aspect of trustworthiness**:
+
+> ✅ **Primary Trustworthiness Aspect: Reliability and Robustness**
+
+In this project, we:
+
+- Systematically test how the models behave under **corruptions** (noise, blur, brightness changes, occlusions).  
+- Evaluate against **adversarial attacks** (FGSM, PGD).  
+- Measure performance under **dataset shift** (PlantVillage → PlantDoc).  
+
+**Grad-CAM explainability** is used as a **supporting tool**, not the main aspect, to verify that the model’s decisions are reasonable and consistent with disease regions.
 
 ---
 
@@ -139,7 +183,7 @@ It outperforms **VGG16**, **MobileNetV2**, and **DenseNet121** in:
 
 We use the **PlantVillage dataset** from Kaggle:
 
-🔗 [https://www.kaggle.com/datasets/naimur006/plant-leaves-disease-detection/data](https://www.kaggle.com/datasets/naimur006/plant-leaves-disease-detection/data)
+🔗 https://www.kaggle.com/datasets/naimur006/plant-leaves-disease-detection/data
 
 ### 3.2 Folder Structure (Example)
 
@@ -153,7 +197,7 @@ Multi_Crop_Dataset/
     ├── apple/
     ├── corn/
     └── ...
-```
+````
 
 Each subfolder represents **one class** (one disease or healthy).
 
@@ -177,17 +221,17 @@ Each subfolder represents **one class** (one disease or healthy).
 
 ### 3.5 Challenge (Domain Gap)
 
-* PlantVillage images are **very clean**.
-* Real farms have:
+PlantVillage images are **very clean**, but real farms have:
 
-  * Shadows
-  * Background clutter
-  * More noise
-  * Different lighting
-* Therefore, we **must** evaluate:
+* Shadows
+* Background clutter
+* More noise
+* Different lighting
 
-  * Robustness (distortions)
-  * Generalization (PlantDoc dataset)
+Therefore, we **must** evaluate:
+
+* **Robustness** (under distortions and attacks)
+* **Generalization** (PlantVillage → PlantDoc dataset)
 
 ---
 
@@ -246,6 +290,47 @@ If any are missing:
 pip install tensorflow
 pip install streamlit
 ```
+
+### 4.4 How to Run the Trustworthiness Evaluation (Robustness, Attacks, Grad-CAM)
+
+All robustness, adversarial, and explainability experiments are implemented in:
+
+```text
+model_training_notebook/train.ipynb
+```
+
+To reproduce the trustworthiness evaluation:
+
+1. **Activate the virtual environment** (see above).
+
+2. **Launch Jupyter Notebook**:
+
+   ```bash
+   jupyter notebook model_training_notebook/train.ipynb
+   ```
+
+3. Inside the notebook, run the cells in these sections (or similarly named blocks):
+
+   * **Robustness Tests**
+
+     * Applies Gaussian noise, blur, brightness changes, and occlusions.
+   * **Adversarial Attacks**
+
+     * Implements **FGSM** and **PGD** attacks on test images.
+   * **Grad-CAM Explainability**
+
+     * Generates heatmaps for all four models.
+   * **PlantDoc Cross-Dataset Evaluation**
+
+     * Evaluates each model on the PlantDoc dataset and computes accuracy / drop.
+
+4. The notebook will output:
+
+   * Robustness accuracy tables (used in Section 9)
+   * Grad-CAM visualizations (used in Section 10)
+   * Cross-dataset results (used in Section 11)
+
+These experiments directly support our **Reliability & Robustness** evaluation for the final project.
 
 ---
 
@@ -309,9 +394,9 @@ We trained **four** CNN-based models:
 
 | Model          | Train Accuracy | Validation Accuracy | Test Accuracy | Final Ranking     |
 | -------------- | -------------- | ------------------- | ------------- | ----------------- |
-| VGG16          | 98.7%          | 96.4%               | 95.8%         |  3rd             |
-| MobileNetV2    | 97.2%          | 95.3%               | 94.7%         |  4th             |
-| DenseNet121    | 99.4%          | 97.8%               | 97.2%         |  2nd             |
+| VGG16          | 98.7%          | 96.4%               | 95.8%         | 3rd               |
+| MobileNetV2    | 97.2%          | 95.3%               | 94.7%         | 4th               |
+| DenseNet121    | 99.4%          | 97.8%               | 97.2%         | 2nd               |
 | **Custom CNN** | **98.1%**      | **98.0%**           | **98.3%**     | 🏆 **1st (BEST)** |
 
 ### 7.2 Key Insight
@@ -341,16 +426,16 @@ So Custom CNN **performs better on unseen data**, which is more important.
 
 ### 8.2 Interpretation
 
-* **Precision** (98.4%) → when the model says a disease is X, it’s usually correct.
-* **Recall** (98.1%) → the model successfully detects most diseased leaves.
-* **F1-score** (98.2%) → overall balanced performance.
+* **Precision (98.4%)** → when the model says a disease is X, it’s usually correct.
+* **Recall (98.1%)** → the model successfully detects most diseased leaves.
+* **F1-score (98.2%)** → overall balanced performance.
 
 ### 8.3 Misclassifications
 
-* Most mistakes occur between **visually similar diseases**, e.g.:
+Most mistakes occur between **visually similar diseases**, e.g.:
 
-  * Tomato Early Blight vs Tomato Bacterial Spot
-  * Apple Scab vs Apple Black Rot
+* Tomato Early Blight vs Tomato Bacterial Spot
+* Apple Scab vs Apple Black Rot
 
 ---
 
@@ -360,19 +445,17 @@ So Custom CNN **performs better on unseen data**, which is more important.
 
 ### 9.1 What is robustness?
 
-A robust model should:
+A robust model should still perform well when:
 
-* Still perform well when:
+* The image is **noisy**
+* **Blurry**
+* **Partially blocked**
+* **Overexposed / underexposed**
+* Slightly attacked by **adversarial perturbations**
 
-  * The image is noisy
-  * Blurry
-  * Partially blocked
-  * Overexposed / underexposed
-  * Slightly attacked (adversarial)
+### 9.2 Distortions We Tested
 
-### 9.2 Distortions You Tested
-
-we tested each model under:
+We tested each model under:
 
 1. **Gaussian Noise**
 2. **Blur**
@@ -395,7 +478,9 @@ we tested each model under:
 ### 9.4 Conclusion
 
 > 🔥 **Custom CNN is the MOST robust model.**
-> It consistently has **the highest accuracy under all distortions**.
+> It consistently has **the highest accuracy under all distortions and attacks**.
+
+This directly supports our chosen aspect of trustworthiness: **Reliability and Robustness**.
 
 ---
 
@@ -407,11 +492,11 @@ we tested each model under:
 
 We don’t want a model that is:
 
-* Accurate but “black-box” and unpredictable.
+* Accurate but **“black-box”** and unpredictable.
 
 We want:
 
-* A model that **looks at the right regions** of the leaf (e.g., disease spots).
+* A model that **looks at the right regions** of the leaf (e.g., disease spots) when making predictions.
 
 ### 10.2 Grad-CAM Heatmap Results
 
@@ -424,13 +509,13 @@ We want:
 
 ### 10.3 Interpretation
 
-* Custom CNN puts its “attention” on the actual **symptoms**:
+Custom CNN puts its “attention” on the actual **symptoms**:
 
-  * Spots
-  * Color changes
-  * Blight patterns
+* Spots
+* Color changes
+* Blight patterns
 
-This makes it **more trustworthy**.
+This makes it **more trustworthy**, and it supports our robustness findings by showing the model is using meaningful visual features.
 
 ---
 
@@ -440,15 +525,14 @@ This makes it **more trustworthy**.
 
 ### 11.1 Why test on PlantDoc?
 
-PlantVillage is **lab-style**.
-PlantDoc images are **real farm-style**:
+PlantVillage is **lab-style**, while PlantDoc images are **real farm-style**:
 
 * Shadows
 * Background clutter
 * Different angles
 * Multiple leaves
 
-This checks **how models behave in real life**.
+This checks **how models behave in real life** (distribution shift).
 
 ### 11.2 Results
 
@@ -462,6 +546,7 @@ This checks **how models behave in real life**.
 ### 11.3 Conclusion
 
 > ✅ **Custom CNN generalizes the best to real-world field images.**
+> Its performance degrades the least when moving from lab images to real farm images, which is critical for reliability.
 
 ---
 
@@ -476,21 +561,27 @@ Custom CNN performed the best in:
 1. **Accuracy**
 
    * Highest test accuracy.
+
 2. **Robustness**
 
-   * Smallest accuracy drop under corruptions.
+   * Smallest accuracy drop under distortions and adversarial attacks.
+
 3. **Explainability**
 
-   * Clean and sharp Grad-CAM heatmaps.
+   * Clean and sharp Grad-CAM heatmaps focusing on disease regions.
+
 4. **Stability under noise**
 
    * Predicts consistently even when images are altered.
+
 5. **Domain generalization**
 
    * Best performance on PlantDoc (real-world images).
+
 6. **Speed and inference time**
 
    * Lightweight, so predictions are fast.
+
 7. **Real-world consistency**
 
    * Less sensitive to small changes (e.g., brightness, noise).
@@ -509,7 +600,7 @@ Custom CNN performed the best in:
 
 Custom CNN is:
 
-* Highly robust to distortions.
+* Highly robust to distortions and adversarial attacks.
 * Strong in explainability using Grad-CAM.
 * Good at generalizing to new datasets (PlantDoc).
 * Fast and efficient for real-time usage.
@@ -520,11 +611,11 @@ Custom CNN is:
 1. Works best with **single-leaf** images.
 2. Does **not** estimate severity (e.g., mild vs severe).
 3. Not fully optimized for **drone images or far-distance shots**.
-4. Adversarial defenses can be improved further.
+4. Adversarial defenses (robust training) can be improved further.
 
 ---
 
-<a name="download-final-modelañ"></a> <a name="download-final-model"></a>
+<a name="download-final-model"></a>
 
 # 📥 14. Download Final Model
 
@@ -547,11 +638,10 @@ app/trained_model/plant_disease_prediction_model.h5
 
 The **Streamlit app**:
 
-1. Lets user **upload a leaf image**.
+1. Lets the user **upload a leaf image**.
 2. Shows the **preview**.
-3. Runs **Custom CNN** model for prediction.
+3. Runs the **Custom CNN** model for prediction.
 4. Displays the **predicted disease name**.
-
 
 ---
 
@@ -565,7 +655,7 @@ The **Streamlit app**:
 python -m streamlit run app/main.py
 ```
 
-Then open browser at:
+Then open the browser at:
 👉 [http://localhost:8501](http://localhost:8501)
 
 ---
@@ -637,14 +727,14 @@ test_images/
 
 ### 18.3 Example Output
 
-**Example prediction:**
+Example prediction:
 
 ```text
 Prediction: Tomato__Tomato_Yellow_Leaf_Curl_Virus
 Confidence: 0.9873
 ```
 
-**Example UI Screenshot (replace with your actual GitHub image path):**
+Example UI Screenshot (replace with your actual GitHub image path):
 
 ```markdown
 ![App Output](https://github.com/harishbhashyam06/AI-Plant-Leaf-Disease-Detection-Using-Deep-Learning/blob/main/test_images/output.png)
@@ -680,7 +770,7 @@ Here is the **entire pipeline**, one step at a time:
    * Generate confusion matrix.
    * Calculate precision, recall, and F1-score.
 
-5. **Trustworthiness Evaluation**
+5. **Trustworthiness Evaluation (Reliability & Robustness)**
 
    * Apply distortions (noise, blur, brightness, occlusion).
    * Run FGSM and PGD adversarial attacks.
@@ -752,7 +842,7 @@ Possible improvements:
 
 3. **Adversarial Training**
 
-   * Improve robustness against strong attacks.
+   * Train the model with adversarial examples to improve robustness.
 
 4. **Mobile Deployment**
 
@@ -787,7 +877,7 @@ Possible improvements:
 
 **Explainability**
 
-* Selvaraju et al., 2017 – Grad-CAM: visual explanations for CNNs (used for your heatmaps).
+* Selvaraju et al., 2017 – Grad-CAM: visual explanations for CNNs (used for our heatmaps).
 * Ribeiro et al., 2016 – LIME: “Why Should I Trust You?” (general XAI motivation).
 
 ### 23.2 Framework Documentation
@@ -798,24 +888,36 @@ Possible improvements:
 
 (Official docs: tensorflow.org, keras.io, docs.streamlit.io)
 
+### 23.3 Code Sources & Attribution
+
+* All training, evaluation, robustness, and Streamlit app code in this repository was primarily written by **our project team**.
+* We referred to the official **TensorFlow/Keras** and **Streamlit** documentation for API usage (model building, data loading, and app setup).
+* The **FGSM** and **PGD** adversarial attack methods are based on the concepts from:
+
+  * Goodfellow et al., 2015 (FGSM)
+  * Madry et al., 2018 (PGD)
+* The **Grad-CAM** implementation follows the method proposed by **Selvaraju et al., 2017**.
+* Any small code snippets adapted from online tutorials or documentation pages are acknowledged with comments inside the corresponding notebook cells or scripts.
+
 ---
 
 <a name="final-summary"></a>
 
 # 🏁 24. Final Summary
 
-* You trained **four models**: Custom CNN, VGG16, MobileNetV2, DenseNet121.
-* You evaluated them in terms of:
+We trained **four models**: Custom CNN, VGG16, MobileNetV2, DenseNet121.
 
-  * Accuracy
-  * Robustness
-  * Explainability
-  * Real-world generalization
+We evaluated them in terms of:
+
+* Accuracy
+* **Reliability & Robustness** (distortions + adversarial attacks)
+* Explainability (supporting, via Grad-CAM)
+* Real-world generalization (PlantDoc)
 
 ✅ **Custom CNN is the best overall**:
 
 * Highest test accuracy
-* Most robust under distortions
+* Most robust under distortions and attacks
 * Best Grad-CAM interpretability
 * Best cross-dataset performance
 * Fastest and most suitable for real deployment
@@ -831,4 +933,7 @@ Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 pip install -r app/requirements.txt
 python -m streamlit run app/main.py
 ```
+
+```
+
 
