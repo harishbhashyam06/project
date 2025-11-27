@@ -309,9 +309,9 @@ We trained **four** CNN-based models:
 
 | Model          | Train Accuracy | Validation Accuracy | Test Accuracy | Final Ranking     |
 | -------------- | -------------- | ------------------- | ------------- | ----------------- |
-| VGG16          | 98.7%          | 96.4%               | 95.8%         | ❌ 3rd             |
-| MobileNetV2    | 97.2%          | 95.3%               | 94.7%         | ❌ 4th             |
-| DenseNet121    | 99.4%          | 97.8%               | 97.2%         | ❌ 2nd             |
+| VGG16          | 98.7%          | 96.4%               | 95.8%         |  3rd             |
+| MobileNetV2    | 97.2%          | 95.3%               | 94.7%         |  4th             |
+| DenseNet121    | 99.4%          | 97.8%               | 97.2%         |  2nd             |
 | **Custom CNN** | **98.1%**      | **98.0%**           | **98.3%**     | 🏆 **1st (BEST)** |
 
 ### 7.2 Key Insight
@@ -372,7 +372,7 @@ A robust model should:
 
 ### 9.2 Distortions You Tested
 
-You tested each model under:
+we tested each model under:
 
 1. **Gaussian Noise**
 2. **Blur**
@@ -552,7 +552,6 @@ The **Streamlit app**:
 3. Runs **Custom CNN** model for prediction.
 4. Displays the **predicted disease name**.
 
-(You can also later add Grad-CAM visualization if desired.)
 
 ---
 
