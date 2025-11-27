@@ -92,7 +92,6 @@ After all experiments, **Custom CNN** is chosen as the **best, most trustworthy 
 
 This project was completed by a team of **three members**:
 
-> ⚠️ _Replace the placeholder names below with your actual names before submission._
 
 - **Member 1 – \<Harish Bhashyam\>**  
   - Collected and organized the **PlantVillage** dataset.  
