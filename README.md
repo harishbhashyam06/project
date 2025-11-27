@@ -934,6 +934,5 @@ pip install -r app/requirements.txt
 python -m streamlit run app/main.py
 ```
 
-```
 
 
