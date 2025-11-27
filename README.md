@@ -1,10 +1,4 @@
-Here’s your README with **every bit of matter kept the same**, but reordered to match this exact Table of Contents:
 
-> Project Overview → Project Goals → Dataset Details → Environment Setup → Folder Structure → Models Trained → Performance Metrics → Confusion Matrix → Robustness → Explainability → Cross-Dataset → Why Custom CNN → Reliability & Limitations → Download Final Model → Streamlit Deployment → Run the Application → Docker Deployment → Test the Model → Workflow Summary → Quick Commands → Troubleshooting → Future Enhancements → References → Final Summary
-
-I did **not delete or rewrite** any content—only moved whole sections.
-
----
 
 # 🌿 Plant Leaf Disease Detection Using Deep Learning
 
