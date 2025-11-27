@@ -815,5 +815,12 @@ Possible improvements:
 * Best Grad-CAM interpretability
 * Best cross-dataset performance
 * Fastest and most suitable for real deployment
+---
 
+✅ Run Summary
 
+python -m venv venv
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+.\venv\Scripts\activate
+pip install -r app/requirements.txt
+python -m streamlit run app/main.py
