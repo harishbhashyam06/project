@@ -681,28 +681,6 @@ App will be available at:
 
 ### 20.1 Research Papers
 
-* **Mohanty et al. (2016)**
-  Used AlexNet and GoogLeNet on PlantVillage and got ~99% accuracy.
-  This shows CNNs are very powerful for plant disease detection.
-
-* **Singh et al. (2019)**
-  Introduced **PlantDoc**, a real-world dataset.
-  They show that models trained on lab data **do not always generalize** to field images.
-
-### 20.2 Framework Documentation
-
-* **TensorFlow** – main ML framework for training + inference
-* **Keras** – high-level API over TensorFlow
-* **Streamlit** – turns Python scripts into web apps quickly
-
-These references support:
-
-* Your **dataset choice**
-* Your **modeling choices**
-* Your **deployment choice**
-
----
-## 📚 References (Short)
 
 **Plant Disease Detection & Datasets**
 - Mohanty et al., 2016 – Deep CNNs (AlexNet, GoogLeNet) on PlantVillage, ~99% accuracy.
@@ -720,8 +698,11 @@ These references support:
 - Selvaraju et al., 2017 – Grad-CAM: visual explanations for CNNs (used for your heatmaps).
 - Ribeiro et al., 2016 – LIME: “Why Should I Trust You?” (general XAI motivation).
 
-**Frameworks**
+**Frameworks Docs**
 - TensorFlow, Keras, Streamlit – official documentation for training and web deployment.
+* **TensorFlow** – main ML framework for training + inference
+* **Keras** – high-level API over TensorFlow
+* **Streamlit** – turns Python scripts into web apps quickly
 
 ---
 
