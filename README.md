@@ -364,6 +364,16 @@ plant-leaf-disease-dl/
 
 # 🧠 6. Models Trained
 
+The best-performing model (**Custom CNN**) was selected for deployment.
+
+📥 **Download Model**: [Google Drive Link](https://drive.google.com/file/d/13uQJa-Bq1sEv2ai_XdrmvrJgWWba7v-7/view)
+
+After download, place it here:
+
+```
+app/trained_model/plant_disease_prediction_model.h5
+```
+
 We trained **four** CNN-based models:
 
 | Model          | Type               | Pros                              | Cons                       |
